@@ -62,8 +62,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Updates Channel", "https://t.me/heliosmirror")
-    buttons.buildbutton("Support Group", "https://t.me/mirrorsociety")
+    buttons.buildbutton("Updates Channel", "https://t.me/Reloadedhub")
+    buttons.buildbutton("Support Group", "https://t.me/reileendrivexd")
     uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
@@ -210,12 +210,12 @@ leech_help_string_telegraph = f'''<br>
 '''
 if LEECH_ENABLED:
     help = telegraph.create_page(
-        title='Helios-Mirror & Leech Help',
+        title='ReileenDrive & Leech Help',
         content=mirror_help_string_telegraph + leech_help_string_telegraph,
     )["path"]
 else:
     help = telegraph.create_page(
-        title='Helios-Mirror Help',
+        title='-ReileenDrive Help',
         content=mirror_help_string_telegraph,
     )["path"]
 
@@ -287,7 +287,7 @@ def main():
         osremove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "<b>Bot Restarted!</b>"
+            text = "<b>Bot Restarted!! Go rape it!</b>"
             message = bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
